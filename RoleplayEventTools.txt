@@ -1,0 +1,22 @@
+﻿## Title: Roleplay Event Tools
+## Version: 1.0
+## Author: Tactitocalon
+## APIVersion: 100021
+## Description: TODO if you are reading this, I forgot to do this and im gay
+## OptionalDependsOn: 
+
+libs\LibStub\LibStub.lua
+libs\LibGroupMessage\LibGroupMessage.lua
+
+EventToolsDMPanel.xml
+
+RLDice.lua
+RoleplayEventTools.lua
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+;
+; You can read the full terms at:
+; https://account.elderscrollsonline.com/add-on-terms

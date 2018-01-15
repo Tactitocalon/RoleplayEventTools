@@ -1,0 +1,105 @@
+<GuiXml>
+    <Controls>
+        
+        <!-- Primary window -->
+        <TopLevelControl movable="true" mouseEnabled="true" name="EventToolsDMPanelWindow" allowBringToTop="true" topmost="true" hidden="true">
+            <Dimensions x="600" y="600"/>
+			<Anchor point="CENTER" relativeTo="GuiRoot" relativePoint="CENTER" offsetX="0" offsetY="0" />
+			
+            <Controls>
+                <Backdrop name="$(parent)_Backdrop" inherits="ZO_DefaultBackdrop"/>
+                <Button name="$(parent)_CloseButton" inheritAlpha="true" verticalAlignment="CENTER"
+                        horizontalAlignment="CENTER">
+                    <Anchor point="CENTER" relativeTo="$(parent)" relativePoint="TOPRIGHT" offsetX="-20" offsetY="20"/>
+                    <Dimensions x="48" y="48"/>
+                    <Textures normal="/esoui/art/hud/radialicon_cancel_up.dds"
+                              mouseOver="/esoui/art/hud/radialicon_cancel_over.dds"/>
+                    <OnClicked>
+                        EventToolsDMPanelWindow:SetHidden(true)
+                    </OnClicked>
+                </Button>
+
+                <Label name="$(parent)_Title" height="25" inheritAlpha="true" verticalAlignment="TOP"
+                       horizontalAlignment="CENTER" font="ZoFontWindowTitle" text="ROLEPLAY EVENT TOOLS - DM PANEL">
+                    <Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetX="0" offsetY="5"/>
+                </Label>
+
+                <Texture name="$(parent)_Divider" textureFile="EsoUI/Art/Miscellaneous/centerscreen_topDivider.dds">
+                    <Dimensions x="600" y="4"/>
+                    <Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetX="0" offsetY="46"/>
+                </Texture>
+
+				<!--
+                <Control name="$(parent)_List" inherits="ZO_ScrollList">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)Divider" relativePoint="BOTTOMLEFT" offsetY="2"/>
+                    <Anchor point="BOTTOMRIGHT" offsetY="-3" offsetX="-3"/>
+                </Control>
+				-->
+            </Controls>
+        </TopLevelControl>
+
+		
+		<!--
+			------ divider ------
+			[RESULT SYMBOL] [Talen-Chath] [1d6 + 4 = 16]                   [Success TICK] [Failure X] [Ignore Circle With Slash]
+			                [The comment can go underneath the roll]
+			------ divider ------
+		-->
+		
+        <!-- List entry (virtual) -->
+        <Control name="EventToolsDMPanelListEntry" horizontalAlignment="LEFT" verticalAlignment="CENTER"
+                 color="CCCCCC" virtual="true">
+            <!--
+            <Dimensions x="870" y="36"/>
+            <Anchor point="TOPLEFT" offsetX="25" offsetY="25"/>
+            <Controls>
+                <Texture name="$(parent)BG" inherits="ZO_ThinListBgStrip"/>
+                <Label name="$(parent)RowId" width="30" height="20" inheritAlpha="true" color="FFFFFF"
+                       verticalAlignment="TOP" horizontalAlignment="RIGHT" text="1">
+                    <Anchor point="TOPLEFT" offsetX="0" offsetY="-5"/>
+                </Label>
+                <Button name="$(parent)Seller" inheritAlpha="true" verticalAlignment="CENTER" horizontalAlignment="LEFT"
+                        text="Buyer">
+                    <Anchor point="TOPLEFT" offsetX="5" offsetY="5"/>
+                    <Dimensions x="110" y="26"/>
+                    <FontColors normalColor="3689EF" mouseOverColor="69EFFF" pressedColor="3689EF"/>
+                </Button>
+                <Label name="$(parent)Guild" inheritAlpha="true" color="FFFFFF" verticalAlignment="CENTER"
+                       horizontalAlignment="LEFT" text="Guild">
+                    <Anchor point="TOPLEFT" offsetX="118" offsetY="5"/>
+                    <Dimensions x="180" y="26"/>
+                </Label>
+                <Texture name="$(parent)ItemIcon" alpha="1">
+                    <Dimensions x="32" y="32"/>
+                    <Anchor point="TOPLEFT" offsetX="306" offsetY="3"/>
+                    <TextureCoords left="0" right="1" top="0" bottom="1"/>
+                </Texture>
+                <Label name="$(parent)Quantity" width="30" height="26" inheritAlpha="true" color="FFFFFF"
+                       verticalAlignment="CENTER" horizontalAlignment="RIGHT" text="1">
+                    <Anchor point="BOTTOMRIGHT" relativeTo="$(parent)ItemIcon" relativePoint="BOTTOMRIGHT" offsetX="0"
+                            offsetY="0"/>
+                </Label>
+                <Label name="$(parent)ItemName" inheritAlpha="true" verticalAlignment="CENTER"
+                       horizontalAlignment="LEFT" text="Item Name" linkEnabled="true" mouseEnabled="true">
+                    <Anchor point="TOPLEFT" offsetX="349" offsetY="5"/>
+                    <Dimensions x="290" y="26"/>
+                    <OnLinkMouseUp>
+                        ZO_LinkHandler_OnLinkMouseUp(linkText, button, self)
+                    </OnLinkMouseUp>
+                </Label>
+                <Label name="$(parent)ListingTime" inheritAlpha="true" color="FFFFFF" verticalAlignment="CENTER"
+                       horizontalAlignment="RIGHT" text="Time">
+                    <Dimensions x="125" y="26"/>
+                    <Anchor point="TOPLEFT" offsetX="630" offsetY="9"/>
+                </Label>
+                <Label name="$(parent)Price" inheritAlpha="true" color="D5B526" verticalAlignment="CENTER"
+                       horizontalAlignment="RIGHT" text="Price">
+                    <Dimensions x="85" y="26"/>
+                    <Anchor point="TOPLEFT" offsetX="765" offsetY="9"/>
+                </Label>
+            </Controls>
+        -->
+        </Control>
+        
+    </Controls>
+</GuiXml>
